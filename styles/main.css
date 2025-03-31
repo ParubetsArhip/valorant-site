@@ -1,3 +1,34 @@
-
+@charset "UTF-8";
+@font-face {
+  font-family: "FF Mark W05";
+  src: url("../fonts/Mark-W05-Medium.woff2") format("woff2");
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DINNextW1G";
+  src: url("../fonts/DINNextW1G-Italic.woff2") format("woff2");
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  /* Акцентные (красные/розовые) */
+  --red-accent: #fa4454; /* основной акцент */
+  --red-light: #ff4655; /* кнопки, ховеры */
+  --red-pink: #fd3a5c; /* розовато-красный */
+  /* Тёмные фоны */
+  --dark-bg: #0f1923; /* основной фон */
+  --dark-card: #1a242d; /* карточки, секции */
+  --dark-divider: #2a3a4b; /* разделители */
+  /* Светлые тексты */
+  --text-white: #ffffff; /* основной текст */
+  --text-cream: #ece8e1; /* второстепенный текст */
+  --text-gray: #b8b8b8; /* неактивные элементы */
+  /* Дополнительные */
+  --dark-footer: #0a141e; /* футер */
+  --gray-blue: #4a5c6a; /* тонкие линии */
+  /* Градиенты */
+  --gradient-red-purple: linear-gradient(90deg, var(--val-red-light) 0%, #bc4582 100%);
+}
 
 /*# sourceMappingURL=main.css.map */
