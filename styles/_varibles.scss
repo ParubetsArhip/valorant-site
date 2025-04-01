@@ -22,4 +22,16 @@
 
     /* Градиенты */
     --gradient-red-purple: linear-gradient(90deg, var(--val-red-light) 0%, #bc4582 100%);
+
+    /* Шрифты */
+    --font-mark: "FF Mark W05", Arial, sans-serif;
+    --font-din: "DINNextW1G", Arial, sans-serif;
+
+    /*Контейнер*/
+    --container-width-header: #{rem(1852)};
+    --container-width-main: #{rem(1504)};
+
+    --container-padding-header-x: #{rem(16)};
+    --container-padding-main-x: #{rem(24)};
 }
+
