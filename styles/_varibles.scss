@@ -15,10 +15,13 @@
     --text-white: #ffffff;     /* основной текст */
     --text-cream: #ece8e1;     /* второстепенный текст */
     --text-gray: #b8b8b8;      /* неактивные элементы */
+    --color-links: #f9f9f9;
 
     /* Дополнительные */
     --dark-footer: #0a141e;    /* футер */
     --gray-blue: #4a5c6a;      /* тонкие линии */
+
+    --bg-body-dark: #1a242e;
 
     /* Градиенты */
     --gradient-red-purple: linear-gradient(90deg, var(--val-red-light) 0%, #bc4582 100%);
@@ -26,6 +29,7 @@
     /* Шрифты */
     --font-mark: "FF Mark W05", Arial, sans-serif;
     --font-din: "DINNextW1G", Arial, sans-serif;
+    --font-tun: "Tungsten", Arial, sans-serif;
 
     /*Контейнер*/
     --container-width-header: #{rem(1852)};
@@ -33,5 +37,26 @@
 
     --container-padding-header-x: #{rem(16)};
     --container-padding-main-x: #{rem(24)};
+
+    --transition-duration: 0.2s;
+
+    @include laptop {
+        --container-width-header: #{rem(1344)};
+        --container-width-main: #{rem(1372)};
+    }
 }
 
+:root {
+    --dark-color: #121418;
+    --dark-var-1-color: #222933;
+    --dark-var-2-color: #292f37;
+    --dark-var-3-color: #8694a6;
+    --dark-var-4-color: #9dadc1;
+    --green-color: #01c29a;
+    --dark-green-color: #0ca385;
+    --yellowish-color: #f2e9d0;
+    --dark-yellowish-color: #d4ccb6;
+    --white-color: #fff;
+    --red-color: #ff0000;
+    --gradient: linear-gradient(45deg, var(--green-color), var(--red-color));
+}

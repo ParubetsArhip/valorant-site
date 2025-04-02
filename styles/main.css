@@ -11,6 +11,13 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "Tungsten";
+  src: url("../fonts/Tungsten-Bold.woff2") format("woff2");
+  font-style: normal;
+  font-display: swap;
+  font-weight: bold;
+}
 :root {
   /* Акцентные (красные/розовые) */
   --red-accent: #fa4454; /* основной акцент */
@@ -24,11 +31,116 @@
   --text-white: #ffffff; /* основной текст */
   --text-cream: #ece8e1; /* второстепенный текст */
   --text-gray: #b8b8b8; /* неактивные элементы */
+  --color-links: #f9f9f9;
   /* Дополнительные */
   --dark-footer: #0a141e; /* футер */
   --gray-blue: #4a5c6a; /* тонкие линии */
+  --bg-body-dark: #1a242e;
   /* Градиенты */
   --gradient-red-purple: linear-gradient(90deg, var(--val-red-light) 0%, #bc4582 100%);
+  /* Шрифты */
+  --font-mark: "FF Mark W05", Arial, sans-serif;
+  --font-din: "DINNextW1G", Arial, sans-serif;
+  --font-tun: "Tungsten", Arial, sans-serif;
+  /*Контейнер*/
+  --container-width-header: 115.75rem;
+  --container-width-main: 94rem;
+  --container-padding-header-x: 1rem;
+  --container-padding-main-x: 1.5rem;
+  --transition-duration: 0.2s;
+}
+@media (width <= 90.06125rem) {
+  :root {
+    --container-width-header: 84rem;
+    --container-width-main: 85.75rem;
+  }
+}
+
+:root {
+  --dark-color: #121418;
+  --dark-var-1-color: #222933;
+  --dark-var-2-color: #292f37;
+  --dark-var-3-color: #8694a6;
+  --dark-var-4-color: #9dadc1;
+  --green-color: #01c29a;
+  --dark-green-color: #0ca385;
+  --yellowish-color: #f2e9d0;
+  --dark-yellowish-color: #d4ccb6;
+  --white-color: #fff;
+  --red-color: #ff0000;
+  --gradient: linear-gradient(45deg, var(--green-color), var(--red-color));
+}
+
+.container {
+  max-width: calc(var(--container-width-main) + var(--container-padding-main-x-x) * 2);
+  margin-inline: auto;
+  padding-inline: var(--container-padding-main-x-x);
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
+}
+
+@media (width <= 47.99875rem) {
+  .hidden-mobile {
+    display: none !important;
+  }
+}
+
+@media (width > 47.99875rem) {
+  .visible-mobile {
+    display: none !important;
+  }
+}
+
+body {
+  font-size: clamp(1rem, 0.9754672897rem + 0.1246105919vw, 1.125rem);
+  font-family: var(--font-din);
+  font-width: 400;
+  line-height: 28px;
+  color: var(--dark-bg);
+  background-color: var(--bg-body-dark);
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-family: var(--font-tun);
+  color: var(--dark-bg);
+}
+
+a,
+button,
+label,
+input,
+textarea,
+select,
+svg * {
+  transition-duration: var(--transition-duration);
+}
+
+a {
+  font-family: var(--font-mark);
+  color: var(--color-links);
+  font-weight: 600;
+}
+
+:focus-visible {
+  outline: 0.125rem dashed var(--text-gray);
+  outline-offset: 0.25rem;
+  transition-duration: 0s !important;
 }
 
 /*# sourceMappingURL=main.css.map */
