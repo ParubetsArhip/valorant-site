@@ -11,6 +11,8 @@
     --dark-card: #1a242d;      /* карточки, секции */
     --dark-divider: #2a3a4b;   /* разделители */
 
+    --header-bg: 111;
+
     /* Светлые тексты */
     --text-white: #ffffff;     /* основной текст */
     --text-cream: #ece8e1;     /* второстепенный текст */
@@ -35,7 +37,7 @@
     --container-width-header: #{rem(1852)};
     --container-width-main: #{rem(1504)};
 
-    --container-padding-header-x: #{rem(16)};
+    --container-padding-header-x: #{rem(20)};
     --container-padding-main-x: #{rem(24)};
 
     --transition-duration: 0.2s;

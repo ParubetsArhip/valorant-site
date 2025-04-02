@@ -33,7 +33,8 @@ svg * {
 a {
   font-family: var(--font-mark);
   color: var(--color-links);
-  font-weight: 600;
+  //font-weight: 600;
+  cursor: pointer;
 }
 
 :focus-visible {
