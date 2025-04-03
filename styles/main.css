@@ -266,18 +266,24 @@ a {
   letter-spacing: 0.08em;
 }
 
-.header__top-input input {
+.search-input {
   all: unset;
   width: 2.5rem;
   height: 2rem;
   position: relative;
   background-color: #2b2a29;
   border-radius: 0.625rem;
+  transition: width 0.5s ease-in-out;
+  padding-left: 0.625rem;
+}
+
+.search-input.active-input {
+  width: 6.25rem;
 }
 
 .search-button {
   position: absolute;
-  padding: 3px 0 0 5px;
+  padding: 5px 0 0 7px;
   z-index: 1;
   background: none;
 }

@@ -1,6 +1,5 @@
 @use "../helpers" as *;
 
-// Header right--------------------------------------
 .header__top {
   //display: flex;
   background-color: #111;
@@ -50,22 +49,26 @@
         }
     }
 }
-// -----------------------------------------
 
-.header__top-input{
-    input{
-        all: unset;
-        width: rem(40);
-        height: rem(32);
-        position: relative;
-        background-color: #2b2a29;
-        border-radius: rem(10);
-    }
+.search-input{
+    all: unset;
+    width: rem(40);
+    height: rem(32);
+    position: relative;
+    background-color: #2b2a29;
+    border-radius: rem(10);
+    transition: width .5s ease-in-out;
+    padding-left: rem(10);
 }
+
+.search-input.active-input{
+    width: rem(100);
+}
+
 
 .search-button{
     position: absolute;
-    padding: 3px 0 0 5px;
+    padding: 5px 0 0 7px;
     z-index: 1;
     background: none;
 }
@@ -84,3 +87,6 @@
     font-weight: 600;
     background: linear-gradient(135deg, rgb(255, 51, 66) 0%, rgb(255, 48, 64) 0.01%, rgb(255, 125, 102) 100%);
 }
+
+
+
