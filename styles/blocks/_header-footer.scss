@@ -1,0 +1,12 @@
+@use "../helpers" as *;
+
+.header__footer-video{
+    position: relative;
+    width: 100%;
+}
+
+.header__footer-content{
+    position: absolute;
+    display: flex;
+}
+

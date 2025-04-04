@@ -1,3 +1,3 @@
-import HeaderInput from './HeaderInput'
+import HeaderInput from './HeaderInput.js'
 
 new HeaderInput()
