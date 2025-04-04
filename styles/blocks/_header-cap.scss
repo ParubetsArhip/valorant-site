@@ -41,7 +41,7 @@
     align-items: center;
     li{
         a{
-            font-size: rem(13);
+            @include fluid-text(15, 15);
             color: #f9f9f9;
             font-weight: 600;
             line-height: 120%;
@@ -79,7 +79,7 @@
 }
 
 .button-play{
-    @include fluid-text(13);
+    @include fluid-text(15, 15);
     width: rem(112);
     height: rem(32);
     border-radius: rem(10);

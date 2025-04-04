@@ -1,12 +1,63 @@
 @use "../helpers" as *;
 
-.header__footer-video{
+.header__footer{
     position: relative;
     width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+
+
+
+
+.header__footer-video{
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
 }
 
 .header__footer-content{
     position: absolute;
-    display: flex;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
 }
 
+.header__footer-content-in{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 19px;
+    z-index: 1;
+}
+
+.content-text-top{
+    @include fluid-text(21, 16)
+}
+
+.content-button{
+    position: relative;
+    border: 1px solid red;
+    width: rem(185);
+    height: rem(66);
+    max-width: rem(185);
+
+    button{
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 10px;
+        width: rem(185);
+        height: rem(66);
+        max-width: rem(185);
+
+        padding: 10px;
+    }
+}
