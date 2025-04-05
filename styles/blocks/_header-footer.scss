@@ -19,6 +19,7 @@
     left: 0;
     width: 100%;
     object-fit: cover;
+    border: none;
 }
 
 .header__footer-content{
@@ -39,25 +40,29 @@
 }
 
 .content-text-top{
-    @include fluid-text(21, 16)
+    @include fluid-text(18, 16)
 }
 
 .content-button{
     position: relative;
-    border: 1px solid red;
-    width: rem(185);
-    height: rem(66);
-    max-width: rem(185);
+    border: 1px solid white;
+    width: rem(190);
+    height: rem(71);
+    max-width: rem(190);
+    padding: rem(3);
 
     button{
-        position: absolute;
-        top: 0;
-        left: 0;
-        padding: 10px;
-        width: rem(185);
-        height: rem(66);
-        max-width: rem(185);
-
-        padding: 10px;
+        @include fluid-text(18, 16);
+        line-height: rem(28);
+        color: var(--text-cream);
+        width: 100%;
+        height: 100%;
+        background: var(--red-light);
+        font-weight: 400;
+        transition: color 0.25s ease-in-out, background-color 0.3s ease-in-out;
+        &:hover{
+            background: var(--text-cream);
+            color: black;
+        }
     }
 }
