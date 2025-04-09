@@ -1,3 +1,3 @@
-import HeaderInput from './HeaderInput.js'
+import MenuBurger from "./MenuBurger.js";
 
-new HeaderInput()
+new MenuBurger()
