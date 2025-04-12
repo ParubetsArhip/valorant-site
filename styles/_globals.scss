@@ -4,7 +4,7 @@ body {
   font-width: 400;
   line-height: 28px;
   color: var(--dark-bg);
-  //background-color: var(--bg-body-dark);
+  background-color: var(--bg-body-dark);
 
   &.lock{
     overflow: hidden;
@@ -26,3 +26,10 @@ h6, .h6 {
   margin: 0 auto;
   padding: 0 16px;
 }
+
+.container-main{
+  max-width: 1504px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+

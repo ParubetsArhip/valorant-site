@@ -1,0 +1,59 @@
+.header__footer{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.header__footer-video{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header__footer-bottom{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+
+    .text-top{
+        font-size: 18px;
+        font-weight: 400;
+        color: rgb(236, 232, 225);
+    }
+
+    .btn-play {
+        position: relative;
+        width: 190px;
+        height: 69px;
+        border: 1px solid white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 3px;
+
+        button {
+            width: 100%;
+            height: 100%;
+            background-color: #FF4655;
+            color: #ECE8E1;
+            font-size: 18px;
+            font-weight: 400;
+            transition: color 0.25s ease-in-out, background-color 0.3s ease-in-out;
+
+            &:hover {
+                background-color: #ECE8E1;
+                color: #0F1923;
+            }
+        }
+    }
+}
+
