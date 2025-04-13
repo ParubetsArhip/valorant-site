@@ -245,7 +245,7 @@ h6, .h6 {
   .menu__body {
     position: absolute;
     top: 0;
-    right: -100%;
+    right: -1000%;
     width: 486px;
     height: 100vh;
     background-color: #111;
@@ -345,18 +345,106 @@ h6, .h6 {
   color: #0F1923;
 }
 
+.agents__center {
+  font-family: var(--font-tun);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container__agents {
+  margin-top: 200px;
+}
+
+.title-agents {
+  font-size: 96px;
+  font-width: 400;
+  color: var(--text-cream);
+}
+@media (max-width: 800px) {
+  .title-agents {
+    font-size: 76px;
+  }
+}
+
 #agents {
   display: grid;
   grid-template-columns: repeat(4, 352px);
   grid-template-rows: repeat(7, 469px);
   gap: 20px;
-  margin-top: 100px;
+  margin-top: 150px;
 }
 @media (max-width: 1500px) {
   #agents {
-    display: grid;
     grid-template-columns: repeat(3, 352px);
     grid-template-rows: repeat(14, 469px);
+  }
+}
+@media (max-width: 1200px) {
+  #agents {
+    grid-template-columns: repeat(2, 352px);
+    grid-template-rows: repeat(14, 469px);
+  }
+}
+@media (max-width: 800px) {
+  #agents {
+    grid-template-columns: repeat(2, 200px);
+    grid-template-rows: repeat(21, 300px);
+  }
+}
+@media (max-width: 460px) {
+  #agents {
+    grid-template-columns: repeat(2, 150px);
+    grid-template-rows: repeat(21, 250px);
+  }
+}
+
+.main__cards {
+  background-color: rgb(15, 25, 35);
+  position: relative;
+  overflow: hidden;
+}
+
+.main__cards-agent {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  transform: scale(1.2);
+  transition: transform 0.2s ease-in-out;
+}
+.main__cards-agent:hover {
+  transform: scale(1.3);
+}
+
+.main__cards-bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: var(--text-cream);
+  z-index: 100;
+}
+@media (max-width: 800px) {
+  .main__cards-bottom {
+    height: 30px;
+  }
+}
+.main__cards-bottom p {
+  font-size: 30px;
+  text-transform: uppercase;
+  color: rgb(15, 25, 35);
+  line-height: 28px;
+  letter-spacing: 0.28px;
+  font-weight: bold;
+  text-align: left;
+  padding: 16px;
+}
+@media (max-width: 800px) {
+  .main__cards-bottom p {
+    font-size: 20px;
+    padding: 3px;
   }
 }
 

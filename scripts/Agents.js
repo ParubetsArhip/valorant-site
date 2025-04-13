@@ -7,9 +7,11 @@ class Agents {
 
             data.forEach(a => {
                 el.innerHTML += `
-                <div>
-                   <h2>${a.displayName}</h2>
-                   <img src="${a.fullPortraitV2 || a.fullPortrait}" width="352">
+                <div class="main__cards">
+                    <img class="main__cards-agent" src="${a.fullPortraitV2 || a.fullPortrait}" width="450" alt="Agents">
+                    <div class="main__cards-bottom">
+                        <p>${a.displayName}</p>
+                    </div>
                 </div>
                 `
             });
@@ -23,6 +25,10 @@ export default Agents
 
 
 
+// <div>
+// <h2>${a.displayName}</h2>
+// <img src="${a.fullPortraitV2 || a.fullPortrait}" width="352">
+// </div>
 
 
 
