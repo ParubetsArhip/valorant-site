@@ -1,54 +1,32 @@
 class Agents {
     constructor () {
         (async () => {
-            const res = await fetch("https://valorant-api.com/v1/agents");
-            const { data } = await res.json();
-            const el = document.getElementById("agents");
+            const getAgents = await fetch('https://valorant-api.com/v1/agents?isPlayableCharacter=true')
+            const { data } = await getAgents.json()
+            const agents = document.getElementById('agents')
 
-            data.forEach(a => {
-                el.innerHTML += `
+            const uniqueAgents = []
+            const namesSet = new Set()
+
+            data.forEach(agent => {
+                if (!namesSet.has(agent.displayName)) {
+                    namesSet.add(agent.displayName)
+                    uniqueAgents.push(agent)
+                }
+            })
+
+            uniqueAgents.forEach(a => {
+                agents.innerHTML += `
                 <div class="main__cards">
-                    <img class="main__cards-agent" src="${a.fullPortraitV2 || a.fullPortrait}" width="450" alt="Agents">
+                    <img class="main__cards-agent" src="${a.fullPortraitV2 || a.fullPortrait}" width="450">
                     <div class="main__cards-bottom">
                         <p>${a.displayName}</p>
                     </div>
                 </div>
                 `
-            });
-        })();
+            })
+        })()
     }
 }
 
 export default Agents
-
-
-
-
-
-// <div>
-// <h2>${a.displayName}</h2>
-// <img src="${a.fullPortraitV2 || a.fullPortrait}" width="352">
-// </div>
-
-
-
-    // (async () => {
-    //     const getAgents = await fetch('https://valorant-api.com/v1/agents')
-    //     const { data } = await getAgents.json()
-    //     const elementsAgents = document.getElementById('agents')
-    //
-    //     const agentName = 'Phoenix'
-    //
-    //     const selectAgent = data.find(a => a.displayName === agentName)
-    //
-    //     if (selectAgent) {
-    //         elementsAgents.innerHTML = `
-    //             <div>
-    //                 <h1 class="agent-name">${selectAgent.displayName}</h1>
-    //                 <img src="${selectAgent.fullPortraitV2}" alt="" width="300">
-    //             </div>
-    //             `
-    //     }else {
-    //         elementsAgents.innerHTML = `<p>Агент не найден</p>`
-    //     }
-    // })()
