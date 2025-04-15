@@ -1,7 +1,7 @@
-html,
 .page-white {
     background-color: var(--text-cream);
-
+    background-image: url("/images/bg-maps-val.avif");
+    //background-repeat: no-repeat;
     position: relative;
     height: 100%;
 }
@@ -31,18 +31,13 @@ html,
     font-weight: 800;
 }
 
-
-
-
 // Slider
 
 
 
-// bg
-
-
-
-
+.block__maps-bottom{
+    margin-top: 100px;
+}
 
 
 .swiper {
@@ -121,8 +116,8 @@ html,
 
 
 .slider__top {
-    background-color: #1e1e1e; /* серый фон */
-    padding: 60px 0;           /* чтобы сверху и снизу было красиво */
+    background-color: rgb(192, 190, 186); /* серый фон */
+    //padding: 60px 0;           /* чтобы сверху и снизу было красиво */
     display: flex;
     justify-content: center;
 
@@ -130,4 +125,11 @@ html,
     max-width: 1504px; /* <-- сделать поуже */
     margin: 0 auto;
     overflow: hidden;
+
+    padding-top: 1px;
+}
+
+.swiper-pagination{
+    margin-top: 1650px;
+    max-width: 1300px;
 }

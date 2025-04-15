@@ -17,11 +17,10 @@
 
 
 
-// Импорт библиотеки Swiper и стилей
-import Swiper from 'swiper/bundle';  // Импорт всей библиотеки
-import 'swiper/swiper-bundle.css';    // Подключение стилей
 
-// Твой код с использованием Swiper
+import Swiper from 'swiper/bundle';
+import 'swiper/swiper-bundle.css';
+
 class MapsSlider {
     constructor() {
         const swiper = new Swiper(".mySwiper", {
@@ -30,6 +29,10 @@ class MapsSlider {
             slidesPerView: 5,
             freeMode: true,
             watchSlidesProgress: true,
+            pagination: {
+                el: ".swiper-pagination",
+                type: "progressbar",
+            },
         });
         const swiper2 = new Swiper(".mySwiper2", {
             loop: true,

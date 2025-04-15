@@ -27,6 +27,17 @@
     &__list{
         display: flex;
         column-gap: 40px;
+        li{
+            a{
+                display: inline-block;
+                padding: 3px 15px;
+                border-radius: 7px;
+                transition: background-color .3s ease-in-out;
+                &:hover{
+                    background-color: #8080804D;
+                }
+            }
+        }
     }
 
     &__link{
