@@ -24,11 +24,23 @@ import 'swiper/swiper-bundle.css';    // Подключение стилей
 // Твой код с использованием Swiper
 class MapsSlider {
     constructor() {
-        const swiper = new Swiper('.main-slider', {
-            // твои настройки слайдера
+        const swiper = new Swiper(".mySwiper", {
             loop: true,
-            navigation: true,
-            pagination: true,
+            spaceBetween: 10,
+            slidesPerView: 5,
+            freeMode: true,
+            watchSlidesProgress: true,
+        });
+        const swiper2 = new Swiper(".mySwiper2", {
+            loop: true,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            thumbs: {
+                swiper: swiper,
+            },
         });
     }
 }
