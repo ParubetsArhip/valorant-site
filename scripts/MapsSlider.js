@@ -31,7 +31,7 @@ class MapsSlider {
             watchSlidesProgress: true,
             pagination: {
                 el: ".swiper-pagination",
-                type: "progressbar",
+                type: true,
             },
         });
         const swiper2 = new Swiper(".mySwiper2", {
@@ -43,6 +43,10 @@ class MapsSlider {
             },
             thumbs: {
                 swiper: swiper,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                type: "progressbar",
             },
         });
     }
