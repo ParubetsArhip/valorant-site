@@ -54,7 +54,7 @@
             width: 30px;
             height: 18px;
             position: relative;
-            z-index: 5;
+            z-index: 200;
             cursor: pointer;
 
             span{
@@ -126,7 +126,27 @@
     }
 }
 
-.menu__button{
+.menu__button-real{
+    width: 112px;
+    height: 32px;
+    background: linear-gradient(135deg, rgb(255, 51, 66) 0%, rgb(255, 48, 64) 0.01%, rgb(255, 125, 102) 100%);
+    color: #111111;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: color 1.5s cubic-bezier(0.06, 0.81, 0, 0.98);
+    display: none;
+
+    &:hover{
+        color: rgba(1, 1, 1, 0.10);
+    }
+
+    @media (max-width: 1100px) {
+        display: block;
+    }
+}
+
+.menu__button-fake{
     width: 112px;
     height: 32px;
     background: linear-gradient(135deg, rgb(255, 51, 66) 0%, rgb(255, 48, 64) 0.01%, rgb(255, 125, 102) 100%);
@@ -144,7 +164,6 @@
         display: none;
     }
 }
-
 
 // ----
 
