@@ -1,0 +1,38 @@
+.body-make-one{
+	background: url('/images/bg-make-one.jpg') 50% / cover no-repeat;
+}
+
+.make__one{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 100vh;
+	row-gap: 30px;
+}
+
+.make__one-bottom{
+	width: 100%;
+	max-width: 464px;
+	height: 590px;
+	background-color: rgb(255, 255, 255);
+
+	&__content{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		row-gap: 10px;
+		font-family: var(--font-mark);
+	}
+	&__h2{
+		font-size: 25px;
+		font-weight: 600;
+	}
+	&__text-1{
+		font-size: 20px;
+		font-weight: 500;
+		color: #737373;
+	}
+}
+

@@ -18,8 +18,14 @@
 	background-color: rgb(15, 25, 35);
 	margin: auto;
 	color: black;
-	// padding: 50px 48px;
+	padding: 70px 48px;
 	cursor: default;
+	@media (max-width: 660px) {
+		height: 460px;
+	}
+	@media (max-width: 365px) {
+		height: 480px;
+	}
 }
 
 .modal__title{
@@ -28,17 +34,24 @@
 	color: var(--text-cream);
 	text-transform: uppercase;
 	margin-bottom: 40px;
+	line-height: -30px;
+	@media (max-width: 660px) {
+		font-size: 40px;
+	}
+	@media (max-width: 395px) {
+		font-size: 35px;
+	}
 }
 
 .modal__close{
-	background-color: transparent;
+	background-color: #ff4566;
 	border: none;
 	cursor: pointer;
 	font-size: 22px;
 	position: absolute;
 	top: 10px;
 	right: 10px;
-	outline: 1px solid green;
+	outline: 1px solid palevioletred;
 	outline-offset: 3px;
 	transition: outline-color .15s ease-in-out;
 	border-radius: 3px;
@@ -47,9 +60,13 @@
 	display: block;
 	width: 30px;
 	height: 30px;
-
+	color: white;
+	transition: transform .2s ease-in-out;
 	&:focus-visible{
-		outline-color: green;
+		outline-color: rgb(216, 76, 122);
+	}
+	&:hover{
+		transform: scale(0.9);
 	}
 }
 
@@ -65,5 +82,50 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	column-gap: 20px;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+
+.modal__bottom-1{
+	p{
+		font-size: 18px;
+		font-weight: 400;
+		color: var(--text-cream);
+	}
+	button{
+		width: 240px;
+		height: 66px;
+		background-color: var(--text-cream);
+		font-size: 18px;
+		color: #0f1923;
+		text-transform: uppercase;
+		font-weight: 600;
+		transition: all .3s ease-in-out;
+		&:hover{
+		background-color: #ff4566;
+		color: var(--text-cream);
+		}
+	}
+}
+
+.modal__bottom-2{
+	p{
+		font-size: 18px;
+		font-weight: 400;
+		color: var(--text-cream);
+	}
+	button{
+		width: 240px;
+		height: 66px;
+		background-color: #ff4566;
+		font-size: 18px;
+		color: var(--text-cream);
+		text-transform: uppercase;
+		font-weight: 600;
+		transition: all .3s ease-in-out;
+		&:hover{
+		background-color: var(--text-cream);
+		color: #0f1923;
+		}
+	}
 }
