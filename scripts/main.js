@@ -11,3 +11,11 @@ new Agents()
 new MapsSlider()
 new Arsenal()
 new ModalWindow()
+
+// Components
+import MyHeader from '../components-js/MyHeader.js';
+import MyFooter from '../components-js/MyFooter.js';
+
+new MyHeader()
+new MyFooter()
+
