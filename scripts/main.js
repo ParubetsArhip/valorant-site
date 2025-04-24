@@ -5,12 +5,14 @@ import Agents from "./Agents.js";
 import MapsSlider from "./MapsSlider";
 import Arsenal from "./Arsenal.js";
 import ModalWindow from './ModalWindow.js';
+import MakeOne from './MakeOne.js';
 
 new MenuBurger()
 new Agents()
 new MapsSlider()
 new Arsenal()
 new ModalWindow()
+new MakeOne()
 
 // Components
 import MyHeader from '../components-js/MyHeader.js';
