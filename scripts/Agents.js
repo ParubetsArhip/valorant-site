@@ -19,6 +19,7 @@ class Agents {
                 agents.innerHTML += `
                 <div class="main__cards">
                     <img class="main__cards-agent" src="${a.fullPortraitV2 || a.fullPortrait}" width="450">
+                    
                     <div class="main__cards-bottom">
                         <p>${a.displayName}</p>
                     </div>
