@@ -4,9 +4,25 @@
 //
 
 .container__gekko{
-    background: linear-gradient(270deg, rgba(27, 37, 46) 24.44%, rgba(11, 15, 18) 56.63%);
+    //background: linear-gradient(270deg, rgba(27, 37, 46) 24.44%, rgba(11, 15, 18) 56.63%);
+    //width: 100%;
+    //height: 850px;
+    position: relative;
     width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container__gekko-bg{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    //height: 100%;
     height: 850px;
+    object-fit: cover;
+    //transform: scale(1.1);
+    z-index: -1;
 }
 
 .header__gekko{
@@ -14,7 +30,7 @@
     justify-content: space-between;
     align-items: center;
     column-gap: 30px;
-    padding-top: 100px;
+    //padding-top: 100px;
 }
 
 .header__gekko-left{
@@ -22,6 +38,7 @@
     justify-content: center;
     flex-direction: column;
     row-gap: 50px;
+    margin-top: 255px;
     &__title{
         font-size: 96px;
         color: var(--text-cream);
@@ -65,7 +82,165 @@
     }
 }
 
-//.header__gekko-image{
-//    position: relative;
-//    z-index: 100;
+.footer__gekko {
+    background-color: rgb(15, 25, 35);
+    width: 100%;
+    min-height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.container-main {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer__gekko-two {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 50px;
+}
+
+.footer__gekko-left {
+    flex: 0 0 240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+
+    &__title {
+        font-size: 65px;
+        line-height: 96px;
+        color: rgb(236, 232, 225);
+        margin-bottom: 10px;
+    }
+
+    &__list {
+        display: flex;
+        column-gap: 30px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        li {
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
+
+.footer__gekko-icon-btn {
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: transform 0.3s;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    img {
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+    }
+}
+
+.footer__gekko-icon-btn {
+    filter:
+            brightness(0)
+            invert(1)
+            grayscale(100%)
+            opacity(0.8);
+}
+
+.footer__gekko-icon-btn-1{
+    filter: brightness(0) invert(1);
+}
+
+//.footer__gekko-icon-btn-2{
+//    filter:
+//            brightness(0)
+//            invert(1)
+//            grayscale(100%)
+//            opacity(0.8);
 //}
+//
+//.footer__gekko-icon-btn-3{
+//    filter:
+//            brightness(0)
+//            invert(1)
+//            grayscale(100%)
+//            opacity(0.8);
+//}
+//
+//.footer__gekko-icon-btn-4{
+//    filter:
+//            brightness(0)
+//            invert(1)
+//            grayscale(100%)
+//            opacity(0.8);
+//}
+
+.footer__gekko-right {
+    flex: 1;
+    max-width: 736px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    &__video-container {
+        width: 100%;
+        aspect-ratio: 16/9;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    &__video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__about {
+        text-align: center;
+
+        h3 {
+            color: rgb(236, 232, 225);
+            font-size: 36px;
+            line-height: 36px;
+            letter-spacing: 0.36px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 28px;
+            color: rgb(236, 232, 225);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .footer__gekko-two {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .footer__gekko-left {
+        flex: 1;
+        width: 100%;
+    }
+
+    .footer__gekko-left__list {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}

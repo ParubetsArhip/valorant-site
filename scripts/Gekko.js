@@ -1,43 +1,32 @@
-// class Gekko {
-//    constructor() {
-//       (async () => {
-//          const getAgents = await fetch('https://valorant-api.com/v1/agents?isPlayableCharacter=true')
-//          const { data } = await getAgents.json()
-//          const getGekko = document.getElementById('header__gekko-right')
-//
-//          const gekko = data.find(agent => agent.displayName === 'Gekko')
-//
-//          if (gekko) {
-//             getGekko.innerHTML = `
-//                 <img src="${gekko.fullPortraitV2 || gekko.fullPortrait}" width="450">
-//             `
-//          }
-//       })()
-//
-//       console.log('hello')
-//    }
-// }
-//
-// export default Gekko
-
-
 class Gekko {
    constructor() {
-      this.init()
-   }
+      // Buttons
+      const btn1 = document.querySelector('.footer__gekko-icon-btn-1')
+      const btn2 = document.querySelector('.footer__gekko-icon-btn-2')
+      const btn3 = document.querySelector('.footer__gekko-icon-btn-3')
+      const btn4 = document.querySelector('.footer__gekko-icon-btn-4')
 
-   async init() {
-      const response = await fetch('https://valorant-api.com/v1/agents?isPlayableCharacter=true')
-      const { data } = await response.json()
-      const gekkoContainer = document.getElementById('header__gekko-right')
+      // Videos
+      const video1 = document.querySelector('.footer__gekko-right__video-1')
+      const video2 = document.querySelector('.footer__gekko-right__video-2')
+      const video3 = document.querySelector('.footer__gekko-right__video-3')
+      const video4 = document.querySelector('.footer__gekko-right__video-4')
 
-      const gekko = data.find(agent => agent.displayName === 'Sova')
-
-      if (gekko) {
-         gekkoContainer.innerHTML = `
-            <img class="header__gekko-image" src="${gekko.fullPortraitV2 || gekko.fullPortrait}" width="450" alt="Gekko">
+      btn2.addEventListener('click', (e) => {
+         e.preventDefault()
+         btn1.style.cssText = `
+         filter:
+            brightness(0)
+            invert(1)
+            grayscale(100%)
+            opacity(0.8);
          `
-      }
+         btn2.style.cssText = `
+         filter: brightness(0) invert(1);
+         `
+         video1.style.display = 'none'
+         video2.style.display = 'block'
+      })
    }
 }
 
