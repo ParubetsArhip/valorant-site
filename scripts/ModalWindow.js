@@ -2,12 +2,14 @@ class ModalWindow {
 	constructor() {
 		const menuBtnFake = document.querySelector('.menu__button-fake')
 		const modalElem = document.querySelector('.modal')
+		const bodyElem = document.querySelector('body')
 
 		modalElem.style.cssText = `
 			display: flex;
 			visibility: hidden;
 			opacity: 0;
 			transition: opacity 300ms ease-in-out;
+			
 		`
 
 		const closeModal = event => {
