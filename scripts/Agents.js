@@ -18,8 +18,10 @@ class Agents {
             uniqueAgents.forEach(a => {
                 agents.innerHTML += `
                 <div class="main__cards">
-                    <img class="main__cards-agent" src="${a.fullPortraitV2 || a.fullPortrait}" width="450">
-                    
+                    <a href="/html-pages/agents/gekko.html">
+                        <img class="main__cards-agent" src="${a.fullPortraitV2 || a.fullPortrait}" width="450">
+                    </a>
+                   
                     <div class="main__cards-bottom">
                         <p>${a.displayName}</p>
                     </div>

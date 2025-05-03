@@ -8,6 +8,7 @@
 
 .container__agents{
     margin-top: 200px;
+    margin-bottom: 100px;
 }
 
 .title-agents{
@@ -48,7 +49,7 @@
     position: relative;
     overflow: hidden;
     height: 469px;
-    z-index: -1;
+    //z-index: -1;
 }
 
 .main__cards-agent{
